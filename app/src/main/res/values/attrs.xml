@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="VodafoneCirclePageIndicator">
+        <!-- Color of the filled circle that represents the current page. -->
+        <attr name="fillColor"/>
+        <!-- Color of the filled circles that represents pages. -->
+        <attr name="pageColor" format="color"/>
+        <!-- Orientation of the indicator. -->
+        <attr name="android:orientation"/>
+        <!-- Radius of the circles. This is also the spacing between circles. -->
+        <attr name="radius" format="dimension"/>
+        <!-- Whether or not the selected indicator snaps to the circles. -->
+        <attr name="snap" format="boolean"/>
+        <!-- Color of the open circles. -->
+        <attr name="strokeColor" format="color"/>
+        <!-- Width of the stroke used to draw the circles. -->
+        <attr name="strokeWidth"/>
+        <!-- View background -->
+        <attr name="android:background"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircularImageView">
+        <attr name="civ_border" format="boolean"/>
+        <attr name="civ_borderColor" format="color"/>
+        <attr name="civ_borderWidth" format="dimension"/>
+        <attr name="civ_backgroundColor" format="color"/>
+        <attr name="civ_has_backgroundColor" format="boolean"/>
+        <attr name="civ_selector" format="boolean"/>
+        <attr name="civ_selectorColor" format="color"/>
+        <attr name="civ_selectorStrokeColor" format="color"/>
+        <attr name="civ_selectorStrokeWidth" format="dimension"/>
+        <attr name="civ_shadow" format="boolean"/>
+        <attr name="civ_shadowRadius" format="float"/>
+        <attr name="civ_shadowDx" format="float"/>
+        <attr name="civ_shadowDy" format="float"/>
+        <attr name="civ_shadowColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircularImageViewStyle">
+        <attr name="circularImageViewDefault" format="reference"/>
+    </declare-styleable>
+
+</resources>

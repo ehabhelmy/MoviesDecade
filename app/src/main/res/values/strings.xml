@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">MoviesDecade</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+    <string name="ok">Ok</string>
 </resources>
