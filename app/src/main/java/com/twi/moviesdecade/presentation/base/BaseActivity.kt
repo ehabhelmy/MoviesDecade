@@ -11,7 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.twi.moviesdecade.MoviesDecadeApp
 import com.twi.moviesdecade.R
 import com.twi.moviesdecade.di.AppComponent
-import com.twi.moviesdecade.presentation.navigation.BaseNavigationManager
 import com.twi.moviesdecade.utils.CustomAlertDialog
 import javax.inject.Inject
 
@@ -39,25 +38,12 @@ abstract class BaseActivity<T> : AppCompatActivity(), BaseView where T : BaseVie
         super.onCreate(savedInstanceState)
         setContentView(layoutId)
         progressBar = findViewById(R.id.progress_bar)
-        setCurrentActivity()
         initializeViewModel()
         subscribeLiveData()
         initView()
     }
 
     fun getAppComponent() : AppComponent?  = (application as? MoviesDecadeApp)?.appComponent
-
-    private fun setCurrentActivity() {
-        BaseNavigationManager.setCurrentActivity(this)
-        BaseNavigationManager.fragmentManager = supportFragmentManager
-    }
-
-
-    override fun onStart() {
-        super.onStart()
-        setCurrentActivity()
-    }
-
 
     protected open fun initView() {
         // will be overridden

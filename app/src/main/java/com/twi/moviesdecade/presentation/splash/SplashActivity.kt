@@ -1,10 +1,11 @@
 package com.twi.moviesdecade.presentation.splash
 
-import android.widget.Toast
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.twi.moviesdecade.R
 import com.twi.moviesdecade.presentation.base.BaseActivity
+import com.twi.moviesdecade.presentation.home.HomeActivity
 
 class SplashActivity(override val layoutId: Int = R.layout.layout_splash, override val containerId: Int = 0) :
     BaseActivity<SplashViewModel>() {
@@ -18,7 +19,8 @@ class SplashActivity(override val layoutId: Int = R.layout.layout_splash, overri
     override fun subscribeLiveData() {
         super.subscribeLiveData()
         baseViewModel?.splashFinishedLiveData?.observe(this, Observer {
-            Toast.makeText(this,"asdasdasdasdas",Toast.LENGTH_LONG).show()
+            startActivity(Intent(this,HomeActivity::class.java))
+            finish()
         })
     }
 }

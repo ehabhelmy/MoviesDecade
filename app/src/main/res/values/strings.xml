@@ -3,4 +3,6 @@
     <string name="error">Error</string>
     <string name="success">Success</string>
     <string name="ok">Ok</string>
+    <string name="movies">Movies</string>
+    <string name="filter">Filter</string>
 </resources>
