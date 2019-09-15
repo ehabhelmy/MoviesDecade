@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#687998</color>
-    <color name="colorPrimaryDark">#3c4d6a</color>
-    <color name="colorAccent">#97a8c9</color>
+    <color name="colorPrimary">#263238</color>
+    <color name="colorPrimaryDark">#000a12</color>
+    <color name="colorAccent">@color/pinky_red</color>
     <color name="white">#ffffff</color>
     <color name="dark_blue">#1b1b4e</color>
     <color name="twilight_blue">#0d4ba0</color>
@@ -20,7 +20,7 @@
     <color name="light_navy">#1450a3</color>
     <color name="darker_grey_two">#efeeed</color>
     <color name="golden">#FACA0F</color>
-    <color name="pinky_red">#ff1b3e</color>
+    <color name="pinky_red">#E8645F</color>
     <color name="coral_pink">#ff536d</color>
     <color name="slate">#495464</color>
     <color name="transparent">#00000000</color>

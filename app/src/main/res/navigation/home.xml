@@ -6,23 +6,6 @@
     <fragment
         android:id="@+id/movies"
         android:name="com.twi.moviesdecade.presentation.movies.MoviesFragment"
-        android:label="MoviesFragment" >
-        <action
-            android:id="@+id/action_moviesFragment_to_movieDetailsFragment"
-            app:destination="@id/movieDetailsFragment"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@anim/fragment_fade_exit"
-            app:popEnterAnim="@anim/fragment_fade_enter"
-            app:popExitAnim="@anim/fragment_fade_exit" />
-    </fragment>
-    <fragment
-        android:id="@+id/movieDetailsFragment"
-        android:name="com.twi.moviesdecade.presentation.moviedetails.MovieDetailsFragment"
-        android:label="MovieDetailsFragment" >
-        <argument
-            android:name="movie"
-            app:argType="com.twi.moviesdecade.data.model.Movie"
-            app:nullable="true"
-            android:defaultValue="@null" />
+        android:label="Movies" >
     </fragment>
 </navigation>

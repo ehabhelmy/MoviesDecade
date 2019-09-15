@@ -1,13 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
 
-
-    <TextView
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Filter"
-        android:layout_centerInParent="true"/>
+        android:layout_marginStart="@dimen/dp16w"
+        android:layout_marginTop="@dimen/dp20h"
+        android:layout_marginEnd="@dimen/dp16w"
+        android:id="@+id/year_selector"
+        >
 
+        <TextView
+            android:id="@+id/select_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_year"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/select_label"
+            android:layout_alignBottom="@id/select_label"
+            android:layout_alignParentEnd="true"
+            android:drawableEnd="@drawable/ic_arrow_point_to_right"
+            android:gravity="center"
+            android:id="@+id/year_selected"
+            android:drawablePadding="@dimen/dp10w"
+            android:text="@string/current_year"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_below="@id/year_selector"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp16h"
+        tools:listitem="@layout/layout_movie_row" />
 </RelativeLayout>

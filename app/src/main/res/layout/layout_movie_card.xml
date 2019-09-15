@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp200h"
+    android:layout_marginBottom="@dimen/dp8h"
+    android:layout_marginStart="@dimen/dp3w"
+    android:layout_marginEnd="@dimen/dp3w"
+    app:cardUseCompatPadding="false"
+    app:cardPreventCornerOverlap="false"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp140h"
+            android:scaleType="fitXY"
+            android:id="@+id/movie_image"
+            app:srcCompat="@mipmap/image" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movie_image"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp6w"
+            android:layout_marginEnd="@dimen/dp6w">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp6h"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/movie_date"
+                android:layout_marginEnd="@dimen/dp3w"
+                android:textColor="@color/white"
+                android:id="@+id/movie_title"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp11"
+                tools:text="Shawshanek Redemption"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/movie_date"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold"
+                android:layout_alignTop="@id/movie_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp10"
+                tools:text="2009"/>
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movie_title"
+                android:id="@+id/movie_rating"
+                android:numStars="5"
+                android:layout_marginTop="@dimen/dp6h"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                tools:rating="3"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -2,8 +2,10 @@ package com.twi.moviesdecade.presentation.home
 
 import android.os.Bundle
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
+import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
 import com.twi.moviesdecade.R
 import com.twi.moviesdecade.presentation.base.BaseActivity
 import com.twi.moviesdecade.presentation.base.setupWithNavController
@@ -49,10 +51,10 @@ class HomeActivity(
             intent = intent
         )
 
-//        // Whenever the selected controller changes, setup the action bar.
-//        controller.observe(this, Observer { navController ->
-//            setupActionBarWithNavController(this, navController)
-//        })
+        // Whenever the selected controller changes, setup the action bar.
+        controller.observe(this, Observer { navController ->
+            setupActionBarWithNavController(this, navController)
+        })
         currentNavController = controller
     }
 

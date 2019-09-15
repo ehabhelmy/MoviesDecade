@@ -15,4 +15,7 @@ interface MoviesDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertMovies(movie: List<Movie>)
+
+//    @Query("SELECT * FROM movie_table WHERE id = :movieId")
+//    fun loadMovieWithAllImages(movieId: Long): MovieAndAllImages
 }

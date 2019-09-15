@@ -3,7 +3,10 @@ package com.twi.moviesdecade.di
 import android.content.Context
 import android.content.SharedPreferences
 import com.twi.moviesdecade.data.local.DatabaseManager
+import com.twi.moviesdecade.data.local.LocalRepository
+import com.twi.moviesdecade.data.local.LocalRepositoryImpl
 import com.twi.moviesdecade.data.local.PreferencesManager
+import com.twi.moviesdecade.data.remote.ServiceGenerator
 import com.twi.moviesdecade.utils.constants.PrefrenceConstants
 import dagger.Module
 import dagger.Provides
@@ -25,8 +28,8 @@ class AppModule(private val application : Context) {
     }
 
     @Provides
-    fun provideDatabase(): DatabaseManager? {
-        return DatabaseManager.getDatabase(context)
+    fun provideDatabase(): DatabaseManager {
+        return DatabaseManager.getDatabase(context)!!
     }
 
     @Singleton
@@ -35,5 +38,16 @@ class AppModule(private val application : Context) {
         return context.getSharedPreferences(PrefrenceConstants.SHARED_PREFERENCES_FILE, Context.MODE_PRIVATE)
     }
 
+    @Singleton
+    @Provides
+    fun getLocalRepository(preferencesManager: PreferencesManager, databaseManager: DatabaseManager): LocalRepository {
+        return LocalRepositoryImpl(preferencesManager, databaseManager)
+    }
+
+    @Singleton
+    @Provides
+    fun getServiceGenerator(): ServiceGenerator {
+        return ServiceGenerator()
+    }
 
 }

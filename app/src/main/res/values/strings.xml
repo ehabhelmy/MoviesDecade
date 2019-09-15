@@ -5,4 +5,10 @@
     <string name="ok">Ok</string>
     <string name="movies">Movies</string>
     <string name="filter">Filter</string>
+    <string name="year">Year</string>
+    <string name="select_year">Select Year</string>
+    <string name="current_year">2018</string>
+    <string name="title">Title</string>
+    <string name="cast">Cast</string>
+    <string name="genres">Genres</string>
 </resources>

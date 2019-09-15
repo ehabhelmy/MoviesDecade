@@ -28,7 +28,7 @@ data class Movie(
 
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
-    var imageUrl: String? = null
+    var movieImages: List<MovieImage>? = null
 
     constructor(parcel: Parcel) : this(
         parcel.readString(),
@@ -38,7 +38,7 @@ data class Movie(
         parcel.readValue(Int::class.java.classLoader) as? Int
     ) {
         id = parcel.readInt()
-        imageUrl = parcel.readString()
+        movieImages = parcel.createTypedArrayList(MovieImage)
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -48,7 +48,7 @@ data class Movie(
         parcel.writeStringList(genres)
         parcel.writeValue(rating)
         parcel.writeInt(id)
-        parcel.writeString(imageUrl)
+        parcel.writeTypedList(movieImages)
     }
 
     override fun describeContents(): Int {
@@ -64,4 +64,6 @@ data class Movie(
             return arrayOfNulls(size)
         }
     }
+
+
 }

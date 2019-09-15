@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp3w"
+    android:layout_marginEnd="@dimen/dp3w"
+    android:layout_marginBottom="@dimen/dp8h"
+    android:orientation="vertical"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movie_image"
+        android:layout_alignParentBottom="true"
+        android:paddingStart="@dimen/dp6w"
+        android:paddingEnd="@dimen/dp6w"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/dp10w"
+            android:layout_marginEnd="@dimen/dp3w"
+            android:layout_toStartOf="@id/movie_date"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp11"
+            android:textStyle="bold"
+            tools:text="Shawshanek Redemption" />
+
+        <TextView
+            android:id="@+id/movie_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/movie_title"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp10"
+            android:textStyle="bold"
+            tools:text="2009" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/movie_rating"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movie_title"
+            android:layout_marginBottom="@dimen/dp10w"
+            android:layout_marginTop="@dimen/dp6h"
+            android:numStars="5"
+            tools:rating="3" />
+
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
