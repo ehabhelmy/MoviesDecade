@@ -92,6 +92,7 @@ abstract class BaseFragment<T : BaseViewModel> : Fragment(), BaseView {
         fragmentView = viewStub.inflate()
         initializeViewModel()
         subscribeLiveData()
+        baseViewModel?.start()
         return rootView
     }
 

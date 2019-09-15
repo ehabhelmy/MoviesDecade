@@ -11,11 +11,12 @@ class SplashViewModel @Inject constructor() : BaseViewModel() {
 
     val splashFinishedLiveData = MutableLiveData<Boolean>()
 
-    init {
+    override fun start() {
         viewModelScope.launch {
             delay(3000)
             splashFinishedLiveData.value = true
         }
     }
+
 
 }

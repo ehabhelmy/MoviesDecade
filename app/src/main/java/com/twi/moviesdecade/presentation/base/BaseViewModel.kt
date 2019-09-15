@@ -16,7 +16,9 @@ abstract class BaseViewModel : ViewModel() {
     var successDialog: MutableLiveData<String> = MutableLiveData()
     var showFullLoading: MutableLiveData<Boolean> = MutableLiveData()
 
-
+    open fun start() {
+        // called when we want to fetch data in initialization
+    }
     protected fun executeOnBackground(block: suspend CoroutineScope.() -> Unit) {
         viewModelScope.launch(context = backgroundContext, block = block)
     }

@@ -40,6 +40,7 @@ abstract class BaseActivity<T> : AppCompatActivity(), BaseView where T : BaseVie
         progressBar = findViewById(R.id.progress_bar)
         initializeViewModel()
         subscribeLiveData()
+        baseViewModel?.start()
         initView()
     }
 

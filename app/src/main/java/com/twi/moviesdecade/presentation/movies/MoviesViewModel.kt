@@ -16,7 +16,7 @@ class MoviesViewModel @Inject constructor(
 
     var moviesLiveData = MutableLiveData<List<Movie>>()
 
-    init {
+    override fun start() {
         showFullLoading.value = true
         executeOnBackground {
             val movies = moviesUseCase.getAllmoviesUnOrdered()
